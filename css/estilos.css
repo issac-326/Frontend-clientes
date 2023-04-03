@@ -9,7 +9,7 @@ main {
 }
 
 
-footer{
+#pie-pagina{
     display: flex;
     justify-content: center;
     height: 70px;
@@ -100,7 +100,7 @@ footer{
     margin-top: 20px;
 }
 
-button{
+#botonOrdenar{
     width: 113px;
     height: 50px;
     border-radius: 15px;
@@ -108,6 +108,7 @@ button{
     font-weight: bold;
     color: white;
     background-color: #4F3EA3;
+    border-color: #4F3EA3;
     margin-left: 15px;
 }
 

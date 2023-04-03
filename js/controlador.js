@@ -55,6 +55,58 @@ var restaurantes = [
                 imagen:"img/Pbasqueso.png",
                 precio:"LPS. 199"
             }
+        ],
+        Familiares:[
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            }
+        ],
+        complementos:[
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            },
+            {
+                nomComida:"PIZZA BASE DE QUESO",
+                descripcion:"Pizza base de queso",
+                imagen:"img/Pbasqueso.png",
+                precio:"LPS. 199"
+            }
         ]
     }
 ]
@@ -137,7 +189,7 @@ function seleccionarCompras(restauranteSeleccionado){
                 <div><p style="font-size: 16px;">${opcionMenu.descripcion}</p></div>
                 <div style="display: flex; justify-content: space-between;">
                     <div><p style="font-size: 20px;">${opcionMenu.precio}</p></div>
-                    <div><button>Ordenar</button></div>
+                    <div><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventana" id="botonOrdenar" onclick="modalCantidadOrdenar()">Ordenar</button></div>
                 </div>
             </div>
             <div style="border-right: 0;">
@@ -147,6 +199,43 @@ function seleccionarCompras(restauranteSeleccionado){
         `
     })
     mostrarOpcionesMenu();
+}
+
+function modalCantidadOrdenar(){
+    document.getElementById('modalOrdenar').innerHTML +=
+    `
+    <div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Cantidad:</p>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" id="menos">-</button>
+                    </div>
+                    <input type="text" class="form-control" id="cantidad" value="1" readonly>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="mas">+</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="ordenar">Ordenar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
+    abirModal();
+}
+
+function abirModal(){
+    $('#ventana').modal('show');
+}
+
+function verComplementos(){
+    
 }
 
 const mostrarOpcionesCategoria = () => {
