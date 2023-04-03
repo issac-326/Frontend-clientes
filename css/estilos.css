@@ -1,0 +1,154 @@
+#posicion-iconos{
+    display: flex;
+    justify-content: space-between;
+}
+
+  
+main {
+    flex: 1;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    background-color: #A6B1E1;
+    border: 1px black solid;
+}
+
+#categorias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contenedorCategoria{
+    width: 156px;
+    height: 130;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    background-position: center center;
+}
+
+.gip-opciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1fr;   
+}
+
+.contenedor-logo-titulo-opciones{
+    height: 56px; 
+    border: 1px black solid; 
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.titulo-opciones{
+    margin-right: 80px; 
+    display: flex; 
+    align-items: center;
+}
+
+.logo-opciones{
+    height: 100%; 
+    margin-left: 30px;
+}
+
+#seleccionar-opcion{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1fr;
+    column-gap: 1fr;
+}
+
+#informacion-local{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 22px;
+    margin-top: 42px;
+}
+
+.logo-pagina{
+    width: 60px; 
+    height: 60px; 
+}
+
+#caja-inf-envio{
+    width: 340px;
+    height: 88px;
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contenedor-inf-envio{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#contenedor-productos{
+    margin: 0;
+    border: 1px black solid;
+    width: 98%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3px;
+    margin-top: 20px;
+}
+
+button{
+    width: 113px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4F3EA3;
+    margin-left: 15px;
+}
+
+.menu {
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin-left: 15px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .menu li.dropdown:hover > ul {
+    display: block;
+  }
+  
+  .menu li.dropdown > ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin-top: 5px;
+    min-width: 120px;
+    z-index: 1;
+  }
+  
+  .menu li.dropdown > ul li {
+    display: block;
+    padding: 10px;
+  }
+  
+  .menu li.dropdown > ul li:hover {
+    background-color: #f2f2f2;
+  }
+  
