@@ -7,11 +7,15 @@ var categorias = [
     },
     {
         imagen: "img/carrito.jpg",
-        opc:[]
+        opc:["img/logoSiman.png", "img/logoKielsa.png", "img/logoFarmaciaFamiliar.png"],
+        tituloRestaurante:["SIMAN", "KIELSA", "FAMILIAR"],
+        nomCategoria: "Super Mercados"
     },
     {
         imagen: "img/botiquin.png",
-        opc:[]
+        opc:["img/logoSiman.png", "img/logoKielsa.png", "img/logoFarmaciaFamiliar.png"],
+        tituloRestaurante:["SIMAN", "KIELSA", "FAMILIAR"],
+        nomCategoria: "Farmacias"
     },
     {
         imagen: "img/bebidas.jpg",
@@ -21,103 +25,541 @@ var categorias = [
 
 var restaurantes = [
     {
-        nombre:"BURGER KING"
+        //0 restaurantes
+        infLocal: [{
+            nombre:"BURGER KING",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/bannerbk.jpg",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        },
+        {
+            nombre:"PIZZA HUT",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/encabezadoPizza.png",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        }
+        ]
     },
     {
-        nombre:"PIZZA HUT",
-        logo: "img/pizza_hut.png",
-        encabezado: "img/encabezadoPizza.png",
-        calificacion: "4.5",
-        tiempoEnvio: "30 min",
-        precioEnvio: "40L.",
-        individuales:[
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            }
-        ],
-        Familiares:[
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            }
-        ],
-        complementos:[
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            },
-            {
-                nomComida:"PIZZA BASE DE QUESO",
-                descripcion:"Pizza base de queso",
-                imagen:"img/Pbasqueso.png",
-                precio:"LPS. 199"
-            }
+        //supermercados
+        infLocal: [{
+            nombre:"BURGER KING",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/bannerbk.jpg",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        },
+        {
+            nombre:"PIZZA HUT",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/encabezadoPizza.png",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        }
         ]
-    }
+    },
+    {
+        //farmacias
+        infLocal: [{
+            nombre:"BURGER KING",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/bannerbk.jpg",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/bkCombo1.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        },
+        {
+            nombre:"PIZZA HUT",
+            logo: "img/pizza_hut.png",
+            encabezado: "img/encabezadoPizza.png",
+            calificacion: "4.5",
+            tiempoEnvio: "30 min",
+            precioEnvio: "40L.",
+            individuales:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza base de queso",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            familiares:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Pizza familiar",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ],
+            complementos:[
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                },
+                {
+                    nomComida:"PIZZA BASE DE QUESO",
+                    descripcion:"Complemento",
+                    imagen:"img/Pbasqueso.png",
+                    precio:"LPS. 199"
+                }
+            ]
+        }
+        ]
+    }                                                                                                  
 ]
 
 function generarCategorias(){
-    console.log(categorias[0].imagen)
     categorias.forEach(function(cat, codigo){
         console.log(cat.imagen)
         document.getElementById('categorias').innerHTML +=
         `
-        <div onclick="opciones(${codigo})" class="contenedorCategoria" style="background-image: url(${cat.imagen})"><p>textazo</p></div>
+        <div onclick="opciones(${codigo})" class="contenedorCategoria" style="background-image: url(${cat.imagen})"><p id="test">textazo</p></div>
         `
     });
 }
@@ -126,11 +568,11 @@ generarCategorias();
 function opciones(categoriaSeleccionada){
     document.getElementById('seleccionar-opcion').innerHTML= " ";
     document.getElementById('seleccionar-opcion').innerHTML =
-    `<p>${categorias[categoriaSeleccionada].nomCategoria}</p>`
+    `<div class="titulo-categoria"><p>${categorias[categoriaSeleccionada].nomCategoria}</p></div>`
 
     categorias[categoriaSeleccionada].opc.forEach(function(logoTitulo, cod){
         document.getElementById('seleccionar-opcion').innerHTML +=
-        `<div onclick="seleccionarCompras(${cod})">
+        `<div onclick="seleccionarCompras(${categoriaSeleccionada}, ${cod})">
             <div class="gip-opciones">
                 <div class="contenedor-logo-titulo-opciones">
                     <div class="logo-opciones"><img style="height: 100%;" src=${logoTitulo}></div>
@@ -143,45 +585,99 @@ function opciones(categoriaSeleccionada){
 
 }
 
-function seleccionarCompras(restauranteSeleccionado){
+function seleccionarCompras(categoriaSeleccionada,restauranteSeleccionado){
+    console.log(categoriaSeleccionada);
+    console.log(restauranteSeleccionado);
     document.getElementById('opcines-de-compra').innerHTML = 
-    `<div style="height: 114px;"><img style="height: 114px; width: 100%;" src=${restaurantes[restauranteSeleccionado].encabezado}></div>
+    `<div style="height: 114px;"><img style="height: 114px; width: 100%;" src=${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].encabezado}></div>
 
     <div id="informacion-local">
         <div>
-            <img class="logo-pagina" src=${restaurantes[restauranteSeleccionado].logo}>
+            <img class="logo-pagina" src=${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].logo}>
         </div>
         <div>
-            <div><p style="margin: 0; font-size: 30px;">${restaurantes[restauranteSeleccionado].nombre}</p></div>
-            <div style="display: flex;"><i class="fa-solid fa-star"></i><p style="margin: 0;">${restaurantes[restauranteSeleccionado].calificacion}</p></div>
+            <div><p style="margin: 0; font-size: 30px;">${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].nombre}</p></div>
+            <div style="display: flex;"><i class="fa-solid fa-star"></i><p style="margin: 0;">${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].calificacion}</p></div>
         </div>
     </div>
 
     <div id="contenedor-inf-envio">
         <div id="caja-inf-envio">
-            <div style="margin-left: 25px;">
+            <div style="margin-left: 25px; margin-top: 10px;">
                 <p>Te llega en:</p>
-                <p>${restaurantes[restauranteSeleccionado].tiempoEnvio}</p>
+                <p>${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].tiempoEnvio}</p>
             </div>
-            <div style="margin-right: 25px;">
+            <div style="margin-right: 25px; margin-top: 10px;">
                 <p>Envío:</p>
-                <p>${restaurantes[restauranteSeleccionado].precioEnvio}</p>
+                <p>${restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].precioEnvio}</p>
             </div>
         </div>
     </div>
 
     <div class="menu">
         <ul>
-          <li><p>Individuales</p></li>
+          <li><p onclick="opcionesMenuIndividuales(${categoriaSeleccionada},${restauranteSeleccionado})" style="font-size: 18px">Individuales</p></li>
           <li>
-            <p>Familiares</p>
+            <p onclick="opcionesMenuFamiliares(${categoriaSeleccionada},${restauranteSeleccionado})" style="font-size: 18px">Familiares</p>
           </li>
-          <li><p>Complementos</p></li>
+          <li><p onclick="opcionesMenuComplementos(${categoriaSeleccionada},${restauranteSeleccionado})" style="font-size: 18px">Complementos</p></li>
         </ul>
     </div>`
+    opcionesMenuIndividuales(categoriaSeleccionada,restauranteSeleccionado);
+}
 
-    restaurantes[restauranteSeleccionado].individuales.forEach(function(opcionMenu){
-        document.getElementById('opcines-de-compra').innerHTML +=
+function opcionesMenuIndividuales(categoriaSeleccionada,restauranteSeleccionado){
+    console.log(categoriaSeleccionada);
+    console.log(restauranteSeleccionado);
+    document.getElementById('menu-opciones').innerHTML = " ";
+    restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].individuales.forEach(function(opcionMenu){
+        document.getElementById('menu-opciones').innerHTML +=
+        `
+        <div id="contenedor-productos">
+            <div style="margin-left: 10px;">
+                <div><p style="font-size: 18px; color: red">${opcionMenu.nomComida}</p></div>
+                <div><p style="font-size: 16px;">${opcionMenu.descripcion}</p></div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div><p style="font-size: 20px;">${opcionMenu.precio}</p></div>
+                    <div><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventana" id="botonOrdenar" onclick="modalCantidadOrdenar()">Ordenar</button></div>
+                </div>
+            </div>
+            <div style="border-right: 0;">
+                    <img style="height: 150px;" src=${opcionMenu.imagen}>
+            </div>
+        </div>
+        `
+    })
+    mostrarOpcionesMenu();
+}
+
+function opcionesMenuFamiliares(categoriaSeleccionada,restauranteSeleccionado){
+    document.getElementById('menu-opciones').innerHTML = " ";
+    restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].familiares.forEach(function(opcionMenu){
+        document.getElementById('menu-opciones').innerHTML +=
+        `
+        <div id="contenedor-productos">
+            <div style="margin-left: 10px;">
+                <div><p style="font-size: 18px; color: red">${opcionMenu.nomComida}</p></div>
+                <div><p style="font-size: 16px;">${opcionMenu.descripcion}</p></div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div><p style="font-size: 20px;">${opcionMenu.precio}</p></div>
+                    <div><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventana" id="botonOrdenar" onclick="modalCantidadOrdenar()">Ordenar</button></div>
+                </div>
+            </div>
+            <div style="border-right: 0;">
+                    <img style="height: 150px;" src=${opcionMenu.imagen}>
+            </div>
+        </div>
+        `
+    })
+    mostrarOpcionesMenu();
+}
+
+function opcionesMenuComplementos(categoriaSeleccionada,restauranteSeleccionado){
+    document.getElementById('menu-opciones').innerHTML = " ";
+    restaurantes[categoriaSeleccionada].infLocal[restauranteSeleccionado].complementos.forEach(function(opcionMenu){
+        document.getElementById('menu-opciones').innerHTML +=
         `
         <div id="contenedor-productos">
             <div style="margin-left: 10px;">
@@ -230,13 +726,11 @@ function modalCantidadOrdenar(){
     abirModal();
 }
 
+
 function abirModal(){
     $('#ventana').modal('show');
 }
 
-function verComplementos(){
-    
-}
 
 const mostrarOpcionesCategoria = () => {
     document.getElementById('inicio').style.display = "none";
@@ -247,6 +741,14 @@ const mostrarOpcionesCategoria = () => {
 const mostrarOpcionesMenu = () => {
     document.getElementById('inicio').style.display = "none";
     document.getElementById('seleccionar-opcion').style.display = "none";
+    document.getElementById('menu-opciones').style.display = "block";
     document.getElementById('opcines-de-compra').style.display = "block";
-    document.getElementById('barraNav').style.display = "none";
+
+}
+
+const regresarInicio = () => {
+    document.getElementById('inicio').style.display = "block";
+    document.getElementById('seleccionar-opcion').style.display = "none";
+    document.getElementById('opcines-de-compra').style.display = "none";
+    document.getElementById('menu-opciones').style.display = "none";
 }

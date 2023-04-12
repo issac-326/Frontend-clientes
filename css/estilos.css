@@ -1,6 +1,17 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('css/Lobster/Lobster-Regular.ttf') format('truetype');
+}
+
+  
+
 #posicion-iconos{
     display: flex;
     justify-content: space-between;
+}
+
+#barraNav{
+    background-color: #4F3EA3;
 }
 
   
@@ -20,6 +31,7 @@ main {
 #categorias{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 .contenedorCategoria{
@@ -28,13 +40,15 @@ main {
     background-size: cover; 
     background-repeat: no-repeat;
     border-radius: 15px;
-    background-position: center center;
+    background-position-y: 5px;
+    background-position-x: 15px;
+    border: 1px black solid;
 }
 
 .gip-opciones{
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 1fr;   
+
 }
 
 .contenedor-logo-titulo-opciones{
@@ -61,6 +75,14 @@ main {
     grid-template-columns: 1fr;
     row-gap: 1fr;
     column-gap: 1fr;
+}
+
+.titulo-categoria{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-family: 'Lobster', cursive;
+    margin-top: 30px;
 }
 
 #informacion-local{
@@ -116,6 +138,7 @@ main {
     background-color: #ffffff;
     padding: 10px 0;
     margin-left: 15px;
+    margin-top: 25px;
   }
   
   .menu ul {
@@ -126,7 +149,7 @@ main {
   
   .menu li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 23px;
   }
   
   .menu li.dropdown:hover > ul {
@@ -153,3 +176,7 @@ main {
     background-color: #f2f2f2;
   }
   
+  #test{
+    margin-bottom: 100px;
+  }
+
