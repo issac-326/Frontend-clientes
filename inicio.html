@@ -45,18 +45,34 @@
     </main>
 
     <div>
-        <button class="boton-flotante"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button class="boton-flotante" onclick="mostrarPedido()"><i class="fa-solid fa-cart-shopping"></i></button>
     </div>
-  
 
+    <div> 
+        <div id="pedidos">
+            
+        </div>
+        <div>
+            <form style="margin: 5px;">
+                <label for="card_number">Número de Tarjeta de Crédito:</label>
+                <input type="text" id="card_number" name="card_number" placeholder="Ingrese su número de tarjeta de crédito" required>
+                <input type="text" id="fecha" style="width: 70px;" name="expiry_date" placeholder="MM/YY" required class="half-width">
+                <input type="password" id="cvv" style="width: 60px;" name="cvv" placeholder="Código de seguridad" required class="half-width">
 
+              
+                <label for="card_holder_name">Dirección:</label>
+                <input type="text" id="direccion" name="card_holder_name" placeholder="Ingrese su Dirección" required> 
+                <button type="button" onclick="enviarPedido()">Pagar</button>
+            </form>
+        </div>
 
-    <!--<footer id="pie-pagina">
-        <img src="img/icono carrito.png">
-    </footer>-->
+    </div>
+      
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="js/controlador.js"></script>
+    <script src="css/formulario.css"></script>
 </body>
 </html>
