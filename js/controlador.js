@@ -90,11 +90,11 @@ function seleccionarCompras(tituloRestaurante){
 
         <div class="menu">
             <ul>
-            <li><p onclick="opcionesMenuIndividuales('${tituloRestaurante}')" style="font-size: 18px">Individuales</p></li>
+            <li><p onclick="opcionesMenuIndividuales('${tituloRestaurante}')" id="individuales" style="font-size: 18px">Individuales</p></li>
             <li>
-                <p onclick="opcionesMenuFamiliares('${tituloRestaurante}')" style="font-size: 18px">Familiares</p>
+                <p onclick="opcionesMenuFamiliares('${tituloRestaurante}')" id="familiares" style="font-size: 18px" >Familiares</p>
             </li>
-            <li><p onclick="opcionesMenuComplementos('${tituloRestaurante}')" style="font-size: 18px">Complementos</p></li>
+            <li><p onclick="opcionesMenuComplementos('${tituloRestaurante}')" id="complementos" style="font-size: 18px">Complementos</p></li>
             </ul>
         </div>`
         opcionesMenuIndividuales(tituloRestaurante);
@@ -104,7 +104,11 @@ function seleccionarCompras(tituloRestaurante){
 }
 
 function opcionesMenuIndividuales(tituloRestaurante){
-    
+    document.getElementById("individuales").style.textDecoration = "underline";
+    document.getElementById("familiares").style.textDecoration = "none";
+    document.getElementById("complementos").style.textDecoration = "none";
+
+
     fetch(`/restaurantes/${tituloRestaurante}/individuales`, {
         method: 'GET',
         headers: {
@@ -138,6 +142,9 @@ function opcionesMenuIndividuales(tituloRestaurante){
 }
 
 function opcionesMenuFamiliares(tituloRestaurante){
+    document.getElementById("individuales").style.textDecoration = "none";
+    document.getElementById("familiares").style.textDecoration = "underline";
+    document.getElementById("complementos").style.textDecoration = "none";
 
     fetch(`/restaurantes/${tituloRestaurante}/familiares`, {
         method: 'GET',
@@ -172,6 +179,10 @@ function opcionesMenuFamiliares(tituloRestaurante){
 }
 
 function opcionesMenuComplementos(tituloRestaurante){
+    document.getElementById("individuales").style.textDecoration = "none";
+    document.getElementById("familiares").style.textDecoration = "none";
+    document.getElementById("complementos").style.textDecoration = "underline";
+
     fetch(`/restaurantes/${tituloRestaurante}/complementos`, {
         method: 'GET',
         headers: {
@@ -235,13 +246,10 @@ function modalCantidadOrdenar(precio, nomComida, imagenC, tituloRestaurante){
 function agregarAlPedido(precioC, nomComida, imagenC, tituloRestaurante){
     var cantidadInput = document.getElementById("cantidad").value;
     var cantidadActual = parseInt(cantidadInput);
-    let restau = tituloRestaurante;
-    let plato = nomComida;
-    let imagenPublicitaria = imagenC
     let encargo ={
-        restaurante: restau,
-        nombre: plato,
-        imagen: imagenPublicitaria,
+        restaurante: tituloRestaurante,
+        nombre: nomComida,
+        imagen: imagenC,
         precio: precioC,
         cantidad: cantidadActual
     }
@@ -275,6 +283,7 @@ function sumar(){
 function mostrarPedido(){
     let factura = 0;
     let impuesto;
+    if(pedido != ""){
     document.getElementById("pedidos").innerHTML = " ";
     for(let i=0; i<pedido.length; i++){
         factura += (pedido[i].precio * pedido[i].cantidad);
@@ -292,7 +301,8 @@ function mostrarPedido(){
         </div>
         `
     }
-    impuesto = factura*0.15;
+    impuesto = (factura*0.15).toFixed(2);
+    factura = factura + parseFloat(impuesto);
     if(pedido != ''){
     document.getElementById("pedidos").innerHTML += `
     <div style="display: flex; margin-left: 30px; justify-content: space-between; margin-right: 30px;">
@@ -309,6 +319,8 @@ function mostrarPedido(){
     </div>
     `
     }
+    mostrarPago();
+}
 }
 
 function enviarPedido(){
@@ -334,6 +346,8 @@ function enviarPedido(){
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+    pedido = [];
+    regresarInicio();
 }
 
 function abirModal(){
@@ -345,6 +359,15 @@ const mostrarOpcionesCategoria = () => {
     document.getElementById('inicio').style.display = "none";
     document.getElementById('seleccionar-opcion').style.display = "block";
     document.getElementById('opcines-de-compra').style.display = "none";
+    document.getElementById('procesoDePaga').style.display = "none";
+}
+
+const mostrarPago = () => {
+    document.getElementById('inicio').style.display = "none";
+    document.getElementById('seleccionar-opcion').style.display = "none";
+    document.getElementById('opcines-de-compra').style.display = "none";
+    document.getElementById('procesoDePaga').style.display = "block";
+    document.getElementById('menu-opciones').style.display = "none";
 }
 
 const mostrarOpcionesMenu = () => {
@@ -352,7 +375,6 @@ const mostrarOpcionesMenu = () => {
     document.getElementById('seleccionar-opcion').style.display = "none";
     document.getElementById('menu-opciones').style.display = "block";
     document.getElementById('opcines-de-compra').style.display = "block";
-
 }
 
 const regresarInicio = () => {
@@ -360,4 +382,5 @@ const regresarInicio = () => {
     document.getElementById('seleccionar-opcion').style.display = "none";
     document.getElementById('opcines-de-compra').style.display = "none";
     document.getElementById('menu-opciones').style.display = "none";
+    document.getElementById('procesoDePaga').style.display = "none";
 }

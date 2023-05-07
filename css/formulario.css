@@ -1,3 +1,60 @@
-#fecha{
-  size: 50px;
+#formulario-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-group .half-width {
+  flex-basis: 48%;
+}
+
+#card_number {
+  width: 100%;
+}
+
+#boton-pagar {
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#boton-pagar:hover {
+  background-color: #0066cc;
 }

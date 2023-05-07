@@ -11,11 +11,11 @@
     <script src="https://kit.fontawesome.com/51774c2df2.js" crossorigin="anonymous"></script>
 </head>
 <body style="margin: 0;">
-    <nav style="margin: 5px;" id="barraNav">
+    <nav id="barraNav">
         <div id="posicion-iconos">
             <div><img src="img/Desplegable.png" alt="Imagen a la izquierda"></div>
-            <div onclick="regresarInicio()"><img src="img/logoS.png"></div>
-            <div><i style="font-size: 40px; color: #F4EEFF" class="fa-solid fa-house"></i></div>
+            <div><img src="img/logoS.png"></div>
+            <div  onclick="regresarInicio()"><i style="font-size: 40px; color: #F4EEFF" class="fa-solid fa-house"></i></div>
         </div>
     </nav>
 
@@ -44,16 +44,16 @@
         </div>
     </main>
 
-    <div>
+    <div id="botonFlotante">
         <button class="boton-flotante" onclick="mostrarPedido()"><i class="fa-solid fa-cart-shopping"></i></button>
     </div>
 
-    <div> 
+    <div id="procesoDePaga" style="display: none;"> 
         <div id="pedidos">
             
         </div>
         <div>
-            <form style="margin: 5px;">
+            <form style="margin: 5px;" id="formulario-pago">
                 <label for="card_number">Número de Tarjeta de Crédito:</label>
                 <input type="text" id="card_number" name="card_number" placeholder="Ingrese su número de tarjeta de crédito" required>
                 <input type="text" id="fecha" style="width: 70px;" name="expiry_date" placeholder="MM/YY" required class="half-width">
@@ -62,7 +62,7 @@
               
                 <label for="card_holder_name">Dirección:</label>
                 <input type="text" id="direccion" name="card_holder_name" placeholder="Ingrese su Dirección" required> 
-                <button type="button" onclick="enviarPedido()">Pagar</button>
+                <button type="button" onclick="enviarPedido()" id="boton-pagar">Pagar</button>
             </form>
         </div>
 

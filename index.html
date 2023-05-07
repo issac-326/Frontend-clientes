@@ -1,41 +1,96 @@
-<!DOCTYPE HTML>
-<html lang="en" >
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/login_style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosLanding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/51774c2df2.js" crossorigin="anonymous"></script>
+    <title>Delivery Hero</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="imagen.png">
 </head>
+<body style="margin: 0;">
+    <div id="encabezado">
+        <div style="display: flex; justify-content: center;">
+            <img id="logo" src="img/logo morado2.png"> 
+        </div>
+        <div id="informacionEncabezado">
+            <div style="width: 242px;">
+                <p style="margin-bottom: 0;" class="eslogan">¿Te falta tiempo?</p>
+                <p style="margin-top: 5px;" class="eslogan">¡No te preocupes!</p>
+                <p class="esloganPequeño">Recibe tus pedidos en la puerta de tu casa</p>
+                <p class="esloganPequeño">¡Registrate ya! Delivery Hero es tu solución</p>
+            </div>
+            <div id="test">
+                <img style="margin-right: 0;" src="img/repartidor.png">
+            </div>
+        </div>
+    </div>
 
-<body class="body">
-	
+    <div id="contenedor-boton">
+        <button id="boton" type="button"><a style="color: aliceblue;" onclick="location.href = 'login.html'" target="_blank">¡Ingresa ya!</a></button>
+    </div>
 
-<div class="login-page">
-  <div class="form">
-
-    <form>
-      <lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player>
-      <input type="text" id="email" placeholder="&#xf007;  username"/>
-      <input type="password" id="password" placeholder="&#xf023;  password"/>
-      <i class="fas fa-eye" onclick="show()"></i> 
-      <br>
-      <br>
-      <button onclick="ingresar()">LOGIN</button>
-      <p class="message"></p>
-    </form>
-
-    <form class="login-form">
-      <button type="button" onclick="window.location.href = 'register.html'">SIGN UP</button>
-    </form>
-  </div>
-</div>
-
-  <script src="js/login.js"></script>
+    <div id="beneficios">
+        <div style="display: flex; justify-content: center; margin-top: 10px;">
+            <div class="tarjeta">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p style="margin-bottom: 0;" class="texto-beneficios">Registrate totalmente</p>
+                <p style="margin-top: 0;" class="texto-beneficios">gratis</p>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img src="img/registrar-icono.png">
+            </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <div class="tarjeta">
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+                <p style="margin-bottom: 0;" class="texto-beneficios">paga de forma segura</p>
+                <p style="margin-bottom: 0; margin-top: 0;" class="texto-beneficios">con tu tarjeta de debito</p>
+                <p style="margin-top: 0;" class="texto-beneficios">o credito</p>
+            </div>
+                <div style="display: flex; justify-content: center;">
+                    <img src="img/tarjeta de credito.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frase-landing">
+        <p>Disfruta de tus restaurantes favoritos</p>
+    </div>
+    <div class="logos-landing">
+        <div class="caja-logos"><img src="img/kfc logo.png"></div>
+        <div class="caja-logos"><img src="img/Burger_King_logo_(1999).svg.png"></div>
+        <div class="caja-logos"><img src="img/pizza hut.png"></div>
+        <div class="caja-logos"><img src="img/McDonalds-logo.png"></div>
+    </div>
+    <div class="frase-landing">
+        <p style="margin-bottom: 0;">Compra en los mejores supermercados</p>
+        <p style="margin-top: 0;">y las mejores farmacias </p>
+    </div>
+    <div class="logos-landing">
+        <div class="marco-img"><img src="img/laColoniaLogo.png"></div>
+        <div class="marco-img"><img src="img/walmark logo.png"></div>
+        <div class="marco-img"><img src="img/farmacia siman.png"></div>
+        <div class="marco-img"><img src="img/kielsa.png"></div>
+    </div>
+    <div id="sobre-nosotros">
+        <div class="colocacion-nosotros">
+            <div><p style="font-size: 15px; margin-bottom: 0;">Acerca de nosotros</p></div>
+            <div id="redes-sociales">
+                <div><i class="fa-brands fa-facebook"></i></div>
+                <div><i class="fa-brands fa-square-twitter"></i></div>
+                <div><i class="fa-brands fa-square-instagram"></i></div>
+            </div>
+        </div>
+        <div class="colocacion-nosotros">
+            <div style="margin-top: 10px;"><a>Empleo</a></div>
+            <div><a style="color: white;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Terminos y condiciones de servicio</a></div>
+        </div>
+    </div>
 </body>
 </html>
